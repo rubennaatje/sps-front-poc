@@ -48,6 +48,9 @@
     "hchs-vue-charts": "^1.2.8",
     "moment": "^2.24.0",
     "nuxt-spreadsheet": "0.0.3",
-    "vue-chartjs": "^3.4.2"
+    "socket.io-client": "^2.3.0",
+    "vue-chartjs": "^3.4.2",
+    "vue-socket.io": "^3.0.7",
+    "vue-socket.io-extended": "^4.0.1"
   }
 }

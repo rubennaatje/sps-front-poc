@@ -1,28 +1,35 @@
 <template>
+<div>
     <LineChart :data="lineChartData" :options="linechartOptions" />
+     <button class="btn" @click="fillData()">Randomize</button>
+</div>
 </template>
 
 <script>
 import LineChart from '~/components/charts/line-chart'
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   components: {
     LineChart,
   },
-  data () {
+  created: function () {
+    setInterval(this.fillData, 500)
+  },
+  computed: {
+    ...mapGetters({
+        getTopspeedbyID: 'cars/getTopSpeed',
+        getTelemetryy: 'cars/getTelemetry',
+        getTopSpeedkeys: 'cars/getTopSpeedkeys'
+     })
+  },
+  watch: {
+    getTelemetryy (newcount, oldcount) {
+      console.log("chahaha")
+    }
+  },
+  data() { 
     return {
-     lineChartData: {
-        labels: ["0%", "0%", "1%", "2%", "3%", "4%", "5%","0%", "0%", "1%", "2%", "3%", "4%", "5%","0%", "0%", "1%", "2%", "3%", "4%", "5%","0%", "0%", "1%", "2%", "3%", "4%", "5%",],
-        datasets: [
-          {
-            label: "speed",
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "rgba(255,0,0,1)",
-            borderWidth: 1,
-            data: [200, 230, 240, 230, 150,100,50,0,10,20,30,40,45,50,199]
-          }
-        ]
-      },
       linechartOptions: {
         maintainAspectRatio: false,
         elements: {
@@ -48,8 +55,45 @@ export default {
                 }   
             }]
         }
+      },
+      lineChartData: {
+
       }
     }
+  },
+  methods: {
+    fillData: function () {
+      let telemetry = this.getTelemetryy(1);
+   
+      const data = {
+        labels: Object.keys(telemetry[0].topspeed),
+        datasets: [
+          {
+            label: "car1",
+            backgroundColor: "rgba(0,0,0,0)",
+            borderColor: "rgba(255,0,0,1)",
+            borderWidth: 1,
+            data: Object.values(telemetry[0].topspeed),
+          },
+          {
+            label: "car2",
+            backgroundColor: "rgba(0,0,0,0)",
+            borderColor: "rgba(0,255,0,1)",
+            borderWidth: 1,
+            data: Object.values(telemetry[1].topspeed),
+          },
+          {
+            label: "car2",
+            backgroundColor: "rgba(0,0,0,0)",
+            borderColor: "rgba(0,0,255,1)",
+            borderWidth: 1,
+            data: Object.values(telemetry[2].topspeed),
+          }
+        ]
+      };
+      this.lineChartData =  data;
+    }
   }
+  
 }
 </script>

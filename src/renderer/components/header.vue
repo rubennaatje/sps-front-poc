@@ -9,6 +9,7 @@
           <li><nuxt-link to="/gridpage"> Grid page</nuxt-link></li>
           <li><nuxt-link to="/test">Test page</nuxt-link></li>
           <li><nuxt-link to="/spreadsheet">Spreadsheet</nuxt-link></li>
+          <li><nuxt-link to="/todos">Todos</nuxt-link></li>
         </ul>
       </nav>
   </div>

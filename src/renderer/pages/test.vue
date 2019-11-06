@@ -1,16 +1,77 @@
 <template>
-  <fieldset>
-    <legend>test</legend>
-This is infact a test page, to try and see wether or not this works well
-    I have tried alternatives for the fieldset but it honestly works best
-  
-  </fieldset>
+    <table>
+      <thead>
+        <th>
+          #
+        </th>
+        <th>
+          category
+        </th>
+        <th>
+          car
+        </th>
+        <th>
+          driver
+        </th>
+        <th>
+          current speed
+        </th>
+        <th>
+          s1
+        </th>
+        <th>
+          s2
+        </th>
+        <th>
+          s3
+        </th>
+        <th>
+          last lap
+        </th>
+      </thead>
+      <tbody>
+        <tr v-for="todo in allSprints">
+          <td class="action">
+            {{ todo.carnumber}}
+          </td>
+          <td :class="todo.category + ' carclass ' + 'action'">
+            {{ todo.category}}
+          </td>
+          <td>
+            {{ todo.car2}}
+          </td>
+          <td>
+            {{ todo.car.drivers[0].name}}
+          </td>
+          <td>
+            {{ todo.speed}}
+          </td>
+          <td>
+            33
+          </td>
+          <td>
+            55
+          </td>
+          <td>
+            21
+          </td>
+          <td>
+            2:01
+          </td>
+        </tr>
+      </tbody>
+    </table>
 </template>
 
 <script>
 import axios from "axios";
 import moment from "moment";
 import LineChart from "~/components/charts/line-chart";
+ import {
+    mapActions,
+    mapGetters
+  } from 'vuex';
+
 export default {
   components: {
     LineChart
@@ -19,16 +80,63 @@ export default {
     return {
       
     };
+  },
+    computed: {
+    ...mapGetters({
+        allSprints: 'cars/getAll',
+    }),
   }
 };
 </script>
-<style scoped>
+<style>
 .bar-chart {
   position: fixed;
   left: 10%;
   top: 10%;
   width: 80%;
   height: 80%;
+}
+
+tr:nth-child(even) {background-color: #2d2c2c;}
+table .action
+{
+    white-space: nowrap
+}
+
+td.action {
+    text-align: center;
+    width: 5px;
+}
+
+table .content { 
+    width: 100% 
+}
+
+.carclass {
+  color: white;
+}
+
+td.LMP1 {
+  background-color: red;
+}
+td.LMP2 {
+  background-color: blue;
+}
+td.LMGTEPro {
+  background-color: green;
+}
+td.LMGTEAm {
+  background-color: orange;
+}
+
+table td, table th {
+    vertical-align: top;
+    /* border: 1px solid var(--font-color); */
+    border:none !important;
+    line-height: 10px !important;
+    padding: 10px;
+    font-size: 1em;
+    color: rgb(185, 194, 66);
 }
 </style>
 

@@ -1,20 +1,12 @@
 <template>
-  <fieldset>
-    <legend>Telemetry</legend>
-      <main class="grid">
-       <div>
-        <fieldset>
-            <legend>speed</legend>
-             <BarChart :data="barChartData" :options="{ maintainAspectRatio: false }" />
-        </fieldset>
-       </div>
-       <div class="throttle">
+      <main class="grid-container">
+       <div class="tyres">
         <fieldset>
             <legend>throttle</legend>
                <LineChart :data="lineChartData" :options="linechartOptions" />
         </fieldset>
        </div>
-       <div>
+       <div class="log">
         <fieldset>
             <legend>Systemlog</legend>
             <p>
@@ -32,27 +24,30 @@
             <p>
               car connection lost
             </p>
+                        <p>
+              car connection lost
+            </p>
+                        <p>
+              car connection lost
+            </p>
+                        <p>
+              car connection lost
+            </p>
         </fieldset>
        </div>
-              <div>
+        <div class="fuel"> 
         <fieldset>
             <legend>fuel</legend>
             <DoughnutChart :data="barChartData" :options="{ maintainAspectRatio: false }" />
         </fieldset>
        </div>
-       <div>
-        <fieldset>
-            <legend>throttle</legend>
-        </fieldset>
-       </div>
-       <div>
+       <div class="speed">
         <fieldset>
             <legend>braking</legend>
             <SpeedGraph/>
         </fieldset>
        </div>
     </main>
-  </fieldset>
 </template>
 
 <script>
@@ -126,19 +121,18 @@ export default {
 </script>
 
 <style>
-.throttle {
-  grid-area: throttleArea;
-}
-.systemlog {
-  max-height: 400px;
-}
-.grid { 
+.grid-container {
   display: grid;
-   grid-template-areas:
-    'div div throttleArea'
-    'div div div';
-  grid-gap: 10px;
-  align-items: stretch;
+  grid-template-columns: 0.5fr 1fr 1.1fr 0.9fr 1.7fr;
+  grid-template-rows: 1fr 0.6fr;
+  grid-template-areas: "tyres tyres tyres fuel log" "speed speed speed speed speed";
 }
 
+.speed { grid-area: speed; height: 50% }
+
+.log { grid-area: log; height: 50%;}
+
+.fuel { grid-area: fuel; height: 50% }
+
+.tyres { grid-area: tyres;  height: 50%}
 </style>
