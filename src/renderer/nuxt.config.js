@@ -14,11 +14,20 @@ module.exports = {
   loading: false,
   plugins: [
     { ssr: true, src: '@/plugins/icons.js' },
+    { ssr: false, src: '@/plugins/konva.js' },
     { ssr: false, src: '~/plugins/socket.io.js' }
   ],
   buildModules: [
   ],
   modules: [
     'nuxt-spreadsheet'
-  ]
+  ],
+  whiteListedModules: ['vue', 'vue-konva', 'konva'],
+  build: {
+    extend (config, ctx) {
+      config.externals = [ {
+        whitelist: ['vue-konva', 'konva', 'vue']
+      }]
+    }
+  }
 }

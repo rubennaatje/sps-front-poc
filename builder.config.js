@@ -49,6 +49,9 @@ module.exports = {
   directories: {
     output: 'build'
   },
+  electronWebpack: {
+    'whiteListedModules': ['vue-konva', 'konva', 'vue']
+  },
   // default files: https://www.electron.build/configuration/contents
   files: [
     'package.json',
