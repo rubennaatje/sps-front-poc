@@ -10,7 +10,7 @@ export default {
   },
   watch: {
     data () {
-      this.renderChart(this.data, this.options);
+      this.renderChart(this.data, this.options)
     }
   }
 }

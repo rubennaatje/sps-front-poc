@@ -29,7 +29,7 @@
     <pre><code class="language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css"</span> /&gt;</span></code></pre>
     <h2 id="themes">Themes</h2>
     <p>To create your own theme just open the dev-tools and edit the CSS Variables. Copy and paste it to your website. Done!</p>
-    <br />
+    <br>
 
     <h2 id="contributers">Contributers</h2>
     <ul>
@@ -40,14 +40,14 @@
         <a href="https://matiaskorhonen.fi/">Matias Korhonen</a>
       </li>
     </ul>
-    <br />
+    <br>
 
     <p>
       With ❤️ by
       <a href="https://jduri.com">Jonas D.</a>
     </p>
 
-    <hr />
+    <hr>
     <div class="components components-grid">
       <aside id="menu">
         <h2>Components</h2>
@@ -138,7 +138,7 @@
                 width="auto"
                 height="auto"
                 alt="random image"
-              />
+              >
             </a>
             <a href="https://picsum.photos" style="border: none;">
               <img
@@ -146,7 +146,7 @@
                 width="auto"
                 height="auto"
                 alt="random image"
-              />
+              >
             </a>
             <a href="https://picsum.photos" style="border: none;">
               <img
@@ -154,7 +154,7 @@
                 width="auto"
                 height="auto"
                 alt="random image"
-              />
+              >
             </a>
             <a href="https://picsum.photos" style="border: none;">
               <img
@@ -162,7 +162,7 @@
                 width="auto"
                 height="auto"
                 alt="random image"
-              />
+              >
             </a>
             <a href="https://picsum.photos" style="border: none;">
               <img
@@ -170,7 +170,7 @@
                 width="auto"
                 height="auto"
                 alt="random image"
-              />
+              >
             </a>
             <a href="https://picsum.photos" style="border: none;">
               <img
@@ -178,7 +178,7 @@
                 width="auto"
                 height="auto"
                 alt="random image"
-              />
+              >
             </a>
             <a href="https://picsum.photos" style="border: none;">
               <img
@@ -186,18 +186,18 @@
                 width="auto"
                 height="auto"
                 alt="random image"
-              />
+              >
             </a>
           </div>
         </section>
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Navigation">Navigation</h2>
           </header>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="NavigationList">Navigation Lists</h2>
@@ -231,7 +231,7 @@
           </nav>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Lists">Lists</h2>
@@ -304,7 +304,7 @@
           </ol>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Typography">Typography</h2>
@@ -332,7 +332,7 @@
           </header>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Tables">Tables</h2>
@@ -405,7 +405,7 @@
             </tbody>
           </table>
         </section>
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="SpecialElements">Special Elements</h2>
@@ -430,57 +430,57 @@
           <p>
             I am
             <a href="?abc123">the a tag</a> example
-            <br />I am
+            <br>I am
             <abbr title="test">the abbr tag</abbr> example
-            <br />I am
+            <br>I am
             <b>the b tag</b> example
-            <br />I am
+            <br>I am
             <cite>the cite tag</cite> example
-            <br />I am
+            <br>I am
             <code>the code tag</code> example
-            <br />I am
+            <br>I am
             <del>the del tag</del> example
-            <br />I am
+            <br>I am
             <dfn>the dfn tag</dfn> example
-            <br />I am
+            <br>I am
             <em>the em tag</em> example
-            <br />I am
+            <br>I am
             <i>the i tag</i> example
-            <br />I am
+            <br>I am
             <ins>the ins tag</ins> example
-            <br />I am
+            <br>I am
             <kbd>the kbd tag</kbd> example
-            <br />I am
+            <br>I am
             <q>the q tag</q> example
-            <br />I am
+            <br>I am
             <samp>the samp tag</samp> example
-            <br />I am
+            <br>I am
             <small>the small tag</small> example
-            <br />I am
+            <br>I am
             <span>the span tag</span> example
-            <br />I am
+            <br>I am
             <strong>the strong tag</strong> example
-            <br />I am
+            <br>I am
             <sub>the sub tag</sub> example
-            <br />I am
+            <br>I am
             <sup>the sup tag</sup> example
-            <br />I am
+            <br>I am
             <var>the var tag</var> example
-            <br />
+            <br>
           </p>
 
           <h4 id="Address">Address</h4>
           <address>
             Mozilla Foundation
-            <br />1981 Landings Drive
-            <br />Building K
-            <br />Mountain View, CA 94043-0801
-            <br />USA
+            <br>1981 Landings Drive
+            <br>Building K
+            <br>Mountain View, CA 94043-0801
+            <br>USA
           </address>
-          <br />
+          <br>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Forms">Forms</h2>
@@ -497,27 +497,27 @@
                   required
                   minlength="5"
                   placeholder="test"
-                />
+                >
               </div>
               <div class="form-group">
                 <label for="text">Text input:</label>
-                <input id="text" name="text" type="text" required minlength="5" placeholder="test" />
+                <input id="text" name="text" type="text" required minlength="5" placeholder="test">
               </div>
               <div class="form-group">
                 <label for="itext">Invalid input (min-length 10):</label>
-                <input id="itext" name="itext" type="text" minlength="10" />
+                <input id="itext" name="itext" type="text" minlength="10">
               </div>
               <div class="form-group">
                 <label for="pw">Password input:</label>
-                <input type="password" id="pw" name="pw" value="password" />
+                <input id="pw" type="password" name="pw" value="password">
               </div>
               <div class="form-group">
                 <label for="radio">Radio input:</label>
-                <input name="radio" type="radio" id="radio" />
+                <input id="radio" name="radio" type="radio">
               </div>
               <div class="form-group">
                 <label for="check">Checkbox input:</label>
-                <input for="check" type="checkbox" id="check" />
+                <input id="check" for="check" type="checkbox">
               </div>
               <div class="form-group">
                 <label for="select">Select field:</label>
@@ -533,73 +533,75 @@
               <div class="form-group">
                 <label for="submit">Input Button:</label>
                 <button
+                  id="submit"
                   class="btn btn-default"
                   type="submit"
                   role="button"
                   name="submit"
-                  id="submit"
-                >Submit</button>
+                >
+                  Submit
+                </button>
               </div>
             </fieldset>
           </form>
         </section>
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Progress">Progress Bar</h2>
           </header>
-          <br />
+          <br>
           <p>With only an arrow</p>
           <div class="progress-bar">
-            <div class="progress-bar-filled" style="width: 40%"></div>
+            <div class="progress-bar-filled" style="width: 40%" />
           </div>
           <p>With a percentage showing above the arrow</p>
           <div class="progress-bar progress-bar-show-percent">
-            <div class="progress-bar-filled" style="width: 30%" data-filled="Loading 30%"></div>
+            <div class="progress-bar-filled" style="width: 30%" data-filled="Loading 30%" />
           </div>
           <p>Without arrow</p>
           <div class="progress-bar progress-bar-no-arrow">
-            <div class="progress-bar-filled" style="width: 60%" data-filled="Loading 60%"></div>
+            <div class="progress-bar-filled" style="width: 60%" data-filled="Loading 60%" />
           </div>
-          <br />
+          <br>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Buttons">Buttons</h2>
           </header>
           <button class="btn btn-default">Default</button>
-          <br />
-          <br />
+          <br>
+          <br>
           <button class="btn btn-primary">Primary</button>
-          <br />
-          <br />
+          <br>
+          <br>
           <button class="btn btn-error">Error</button>
-          <br />
-          <br />
+          <br>
+          <br>
           <button class="btn btn-default btn-ghost">Ghost Button</button>
-          <br />
-          <br />
+          <br>
+          <br>
           <button class="btn btn-primary btn-ghost">Ghost Button</button>
-          <br />
-          <br />
+          <br>
+          <br>
           <button class="btn btn-error btn-ghost">Ghost Button</button>
-          <br />
-          <br />
+          <br>
+          <br>
           <button class="btn btn-primary btn-block">Block Level Button</button>
-          <br />
-          <br />
+          <br>
+          <br>
           <p>Button Group</p>
           <div class="btn-group">
             <button class="btn btn-default btn-ghost">Left</button>
             <button class="btn btn-default btn-ghost">Middle</button>
             <button class="btn btn-default btn-ghost">Right</button>
           </div>
-          <br />
+          <br>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Cards">Cards</h2>
@@ -612,10 +614,10 @@
               incidunt. Eaque quod et, aut maiores excepturi sint.
             </div>
           </div>
-          <br />
+          <br>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Timeline">Timeline</h2>
@@ -638,10 +640,10 @@
               </div>
             </div>
           </div>
-          <br />
+          <br>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Alerts">Alerts</h2>
@@ -650,7 +652,7 @@
           <div class="terminal-alert terminal-alert-primary">Primary message</div>
           <div class="terminal-alert terminal-alert-error">Error message</div>
         </section>
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="Figure">Image with caption</h2>
@@ -660,12 +662,12 @@
               src="https://picsum.photos/1000/600?random&amp;imageWithCaption"
               alt="Image with caption"
               title="Image with caption"
-            />
+            >
             <figcaption>Image with caption</figcaption>
           </figure>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2 id="highlightjs">Supports Highlight.js</h2>
@@ -741,7 +743,6 @@
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--primary-color);
 }
 
-
 <span class="hljs-selector-class">.hljs-emphasis</span> {
   <span class="hljs-attribute">font-style</span>: italic;
 }
@@ -753,7 +754,7 @@
 </pre>
         </section>
 
-        <hr />
+        <hr>
         <section>
           <header>
             <h2>Documentation</h2>
@@ -767,13 +768,13 @@
 
             <dl class="custom-dl">
               <style>
-  .custom-dl dt {
-    font-weight: 600;
-  }
+                .custom-dl dt {
+                font-weight: 600;
+                }
 
-  .custom-dl dd.italic {
-    font-style: italic;
-  }
+                .custom-dl dd.italic {
+                font-style: italic;
+                }
               </style>
               <dt>--global-font-size</dt>
               <dd>The Base font size</dd>
@@ -815,7 +816,9 @@
               <dd>The style of input element borders. Possible values are:</dd>
               <dd
                 class="italic"
-              >none, solid, dotted, dashed, double, groove, ridge, inset, outset, hidden, inherit, initial, unset</dd>
+              >
+                none, solid, dotted, dashed, double, groove, ridge, inset, outset, hidden, inherit, initial, unset
+              </dd>
               <dt>--display-h1-decoration</dt>
               <dd>
                 Show a double dash below
@@ -825,7 +828,7 @@
             </dl>
           </section>
 
-          <hr />
+          <hr>
           <section>
             <header>
               <h2 id="DocTypography">Typography</h2>
@@ -841,7 +844,7 @@
             </dl>
           </section>
         </section>
-        <hr />
+        <hr>
         <footer>
           <p>
             This project is inspired by
@@ -858,9 +861,9 @@
           </p>
         </footer>
 
-        <hr />
+        <hr>
         <section>
-          <header></header>
+          <header />
           <p>
             Version: 0.7.1
             <a href="#menu">Top</a>
@@ -872,23 +875,22 @@
 </template>
 
 <script>
-import { remote } from "electron";
-import SystemInformation from "@/components/SystemInformation.vue";
+import { remote } from 'electron'
+import SystemInformation from '@/components/SystemInformation.vue'
 
 export default {
   components: {
     SystemInformation
   },
-  data() {
+  data () {
     return {
-      externalContent: ""
-    };
+      externalContent: ''
+    }
   },
   methods: {
-    openURL(url) {
-      remote.shell.openExternal(url);
+    openURL (url) {
+      remote.shell.openExternal(url)
     }
   }
-};
+}
 </script>
-

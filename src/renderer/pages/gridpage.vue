@@ -1,53 +1,53 @@
 <template>
-      <main class="grid-container">
-       <div class="tyres">
-        <fieldset>
-            <legend>throttle</legend>
-               <LineChart :data="lineChartData" :options="linechartOptions" />
-        </fieldset>
-       </div>
-       <div class="log">
-        <fieldset>
-            <legend>Systemlog</legend>
-            <p>
-              car connection lost
-            </p>
-            <p>
-              car connection found
-            </p>
-            <p>
-              Lap completed
-            </p>
-            <p>
-              car connection lost
-            </p>
-            <p>
-              car connection lost
-            </p>
-                        <p>
-              car connection lost
-            </p>
-                        <p>
-              car connection lost
-            </p>
-                        <p>
-              car connection lost
-            </p>
-        </fieldset>
-       </div>
-        <div class="fuel"> 
-        <fieldset>
-            <legend>fuel</legend>
-            <DoughnutChart :data="barChartData" :options="{ maintainAspectRatio: false }" />
-        </fieldset>
-       </div>
-       <div class="speed">
-        <fieldset>
-            <legend>braking</legend>
-            <SpeedGraph/>
-        </fieldset>
-       </div>
-    </main>
+  <main class="grid-container">
+    <div class="tyres">
+      <fieldset>
+        <legend>throttle</legend>
+        <LineChart :data="lineChartData" :options="linechartOptions" />
+      </fieldset>
+    </div>
+    <div class="log">
+      <fieldset>
+        <legend>Systemlog</legend>
+        <p>
+          car connection lost
+        </p>
+        <p>
+          car connection found
+        </p>
+        <p>
+          Lap completed
+        </p>
+        <p>
+          car connection lost
+        </p>
+        <p>
+          car connection lost
+        </p>
+        <p>
+          car connection lost
+        </p>
+        <p>
+          car connection lost
+        </p>
+        <p>
+          car connection lost
+        </p>
+      </fieldset>
+    </div>
+    <div class="fuel">
+      <fieldset>
+        <legend>fuel</legend>
+        <DoughnutChart :data="barChartData" :options="{ maintainAspectRatio: false }" />
+      </fieldset>
+    </div>
+    <div class="speed">
+      <fieldset>
+        <legend>braking</legend>
+        <SpeedGraph />
+      </fieldset>
+    </div>
+  </main>
 </template>
 
 <script>
@@ -56,7 +56,7 @@ import moment from 'moment'
 import DoughnutChart from '~/components/charts/doughnut-chart'
 import LineChart from '~/components/charts/line-chart'
 import BarChart from '~/components/charts/bar-chart'
-import SpeedGraph from '~/components/telemetry/speedgraph';
+import SpeedGraph from '~/components/telemetry/speedgraph'
 export default {
   components: {
     BarChart,
@@ -64,26 +64,26 @@ export default {
     LineChart,
     SpeedGraph
   },
- data(){
+  data () {
     return {
       barChartData: {
-        labels: ["fuel"],
+        labels: ['fuel'],
         datasets: [
           {
             label: 'Fuel left',
-            backgroundColor: "rgba(255,0,0,1)",
+            backgroundColor: 'rgba(255,0,0,1)',
             borderWidth: 0,
-            data: [65],
+            data: [65]
           }
         ]
       },
-       lineChartData: {
-        labels: ["0%", "0%", "1%", "2%", "3%", "4%", "5%"],
+      lineChartData: {
+        labels: ['0%', '0%', '1%', '2%', '3%', '4%', '5%'],
         datasets: [
           {
-            label: "speed",
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "rgba(255,0,0,1)",
+            label: 'speed',
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderColor: 'rgba(255,0,0,1)',
             borderWidth: 1,
             data: [200, 230, 240, 230, 10]
           }
@@ -103,16 +103,16 @@ export default {
         },
         responsiveAnimationDuration: 0,
         scales: {
-            xAxes: [{
-                gridLines: {
-                    display:false
-                }
-            }],
-            yAxes: [{
-                gridLines: {
-                    display:false
-                }   
-            }]
+          xAxes: [{
+            gridLines: {
+              display: false
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: false
+            }
+          }]
         }
       }
     }

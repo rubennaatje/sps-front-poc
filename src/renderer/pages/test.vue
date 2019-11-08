@@ -1,92 +1,92 @@
 <template>
-    <table>
-      <thead>
-        <th>
-          #
-        </th>
-        <th>
-          category
-        </th>
-        <th>
-          car
-        </th>
-        <th>
-          driver
-        </th>
-        <th>
-          current speed
-        </th>
-        <th>
-          s1
-        </th>
-        <th>
-          s2
-        </th>
-        <th>
-          s3
-        </th>
-        <th>
-          last lap
-        </th>
-      </thead>
-      <tbody>
-        <tr v-for="todo in allSprints">
-          <td class="action">
-            {{ todo.carnumber}}
-          </td>
-          <td :class="todo.category + ' carclass ' + 'action'">
-            {{ todo.category}}
-          </td>
-          <td>
-            {{ todo.car2}}
-          </td>
-          <td>
-            {{ todo.car.drivers[0].name}}
-          </td>
-          <td>
-            {{ todo.speed}}
-          </td>
-          <td>
-            33
-          </td>
-          <td>
-            55
-          </td>
-          <td>
-            21
-          </td>
-          <td>
-            2:01
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <table>
+    <thead>
+      <th>
+        #
+      </th>
+      <th>
+        category
+      </th>
+      <th>
+        car
+      </th>
+      <th>
+        driver
+      </th>
+      <th>
+        current speed
+      </th>
+      <th>
+        s1
+      </th>
+      <th>
+        s2
+      </th>
+      <th>
+        s3
+      </th>
+      <th>
+        last lap
+      </th>
+    </thead>
+    <tbody>
+      <tr v-for="todo in allSprints">
+        <td class="action">
+          {{ todo.carnumber }}
+        </td>
+        <td :class="todo.category + ' carclass ' + 'action'">
+          {{ todo.category }}
+        </td>
+        <td>
+          {{ todo.car2 }}
+        </td>
+        <td>
+          {{ todo.car.drivers[0].name }}
+        </td>
+        <td>
+          {{ todo.speed }}
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          2:01
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>
-import axios from "axios";
-import moment from "moment";
-import LineChart from "~/components/charts/line-chart";
- import {
-    mapActions,
-    mapGetters
-  } from 'vuex';
+import axios from 'axios'
+import moment from 'moment'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
+import LineChart from '~/components/charts/line-chart'
 
 export default {
   components: {
     LineChart
   },
-  data() {
+  data () {
     return {
-      
-    };
+
+    }
   },
-    computed: {
+  computed: {
     ...mapGetters({
-        allSprints: 'cars/getAll',
-    }),
+      allSprints: 'cars/getAll'
+    })
   }
-};
+}
 </script>
 <style>
 .bar-chart {
@@ -108,8 +108,8 @@ td.action {
     width: 5px;
 }
 
-table .content { 
-    width: 100% 
+table .content {
+    width: 100%
 }
 
 .carclass {
@@ -139,4 +139,3 @@ table td, table th {
     color: rgb(185, 194, 66);
 }
 </style>
-

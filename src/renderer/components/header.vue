@@ -1,17 +1,17 @@
 <template>
   <div class="terminal-nav">
-      <div class="terminal-logo">
-        <div class="logo terminal-prompt"><a href="#" class="no-style">Sportscar strategist</a></div>
-      </div>
-      <nav class="terminal-menu">
-        <ul>
-          <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><nuxt-link to="/gridpage"> Grid page</nuxt-link></li>
-          <li><nuxt-link to="/test">Test page</nuxt-link></li>
-          <li><nuxt-link to="/spreadsheet">Spreadsheet</nuxt-link></li>
-          <li><nuxt-link to="/todos">Todos</nuxt-link></li>
-        </ul>
-      </nav>
+    <div class="terminal-logo">
+      <div class="logo terminal-prompt"><a href="#" class="no-style">Sportscar strategist</a></div>
+    </div>
+    <nav class="terminal-menu">
+      <ul>
+        <li><nuxt-link to="/">Home</nuxt-link></li>
+        <li><nuxt-link to="/gridpage"> Grid page</nuxt-link></li>
+        <li><nuxt-link to="/test">Test page</nuxt-link></li>
+        <li><nuxt-link to="/spreadsheet">Spreadsheet</nuxt-link></li>
+        <li><nuxt-link to="/todos">Todos</nuxt-link></li>
+      </ul>
+    </nav>
   </div>
 </template>
 

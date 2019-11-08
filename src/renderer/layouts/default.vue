@@ -1,8 +1,8 @@
 <template>
-  <div >
-    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css" />
+  <div>
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.1/dist/terminal.min.css">
     <app-header />
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 
@@ -35,7 +35,7 @@ body {
     --background-color: #151517 !important;
     --page-width: 60em !important;
     --font-color: #e8e9ed !important;
-    --invert-font-color: #222225 !important; 
+    --invert-font-color: #222225 !important;
     --secondary-color: #a3abba !important;
     --tertiary-color: #a3abba !important;
     --primary-color: #62c4ff !important;
@@ -54,16 +54,16 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 </style>

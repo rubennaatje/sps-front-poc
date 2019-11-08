@@ -1,34 +1,34 @@
 <template>
-<div>
+  <div>
     <LineChart :data="lineChartData" :options="linechartOptions" />
-     <button class="btn" @click="fillData()">Randomize</button>
-</div>
+    <button class="btn" @click="fillData()">Randomize</button>
+  </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import LineChart from '~/components/charts/line-chart'
-import { mapActions, mapGetters } from 'vuex';
 
 export default {
   components: {
-    LineChart,
+    LineChart
   },
-  created: function () {
+  created () {
     setInterval(this.fillData, 500)
   },
   computed: {
     ...mapGetters({
-        getTopspeedbyID: 'cars/getTopSpeed',
-        getTelemetryy: 'cars/getTelemetry',
-        getTopSpeedkeys: 'cars/getTopSpeedkeys'
-     })
+      getTopspeedbyID: 'cars/getTopSpeed',
+      getTelemetryy: 'cars/getTelemetry',
+      getTopSpeedkeys: 'cars/getTopSpeedkeys'
+    })
   },
   watch: {
     getTelemetryy (newcount, oldcount) {
-      console.log("chahaha")
+      console.log('chahaha')
     }
   },
-  data() { 
+  data () {
     return {
       linechartOptions: {
         maintainAspectRatio: false,
@@ -44,16 +44,16 @@ export default {
         },
         responsiveAnimationDuration: 0,
         scales: {
-            xAxes: [{
-                gridLines: {
-                    display:false
-                }
-            }],
-            yAxes: [{
-                gridLines: {
-                    display:false
-                }   
-            }]
+          xAxes: [{
+            gridLines: {
+              display: false
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: false
+            }
+          }]
         }
       },
       lineChartData: {
@@ -62,38 +62,38 @@ export default {
     }
   },
   methods: {
-    fillData: function () {
-      let telemetry = this.getTelemetryy(1);
-   
+    fillData () {
+      const telemetry = this.getTelemetryy(1)
+
       const data = {
         labels: Object.keys(telemetry[0].topspeed),
         datasets: [
           {
-            label: "car1",
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "rgba(255,0,0,1)",
+            label: 'car1',
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderColor: 'rgba(255,0,0,1)',
             borderWidth: 1,
-            data: Object.values(telemetry[0].topspeed),
+            data: Object.values(telemetry[0].topspeed)
           },
           {
-            label: "car2",
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "rgba(0,255,0,1)",
+            label: 'car2',
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderColor: 'rgba(0,255,0,1)',
             borderWidth: 1,
-            data: Object.values(telemetry[1].topspeed),
+            data: Object.values(telemetry[1].topspeed)
           },
           {
-            label: "car2",
-            backgroundColor: "rgba(0,0,0,0)",
-            borderColor: "rgba(0,0,255,1)",
+            label: 'car2',
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderColor: 'rgba(0,0,255,1)',
             borderWidth: 1,
-            data: Object.values(telemetry[2].topspeed),
+            data: Object.values(telemetry[2].topspeed)
           }
         ]
-      };
-      this.lineChartData =  data;
+      }
+      this.lineChartData = data
     }
   }
-  
+
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h3>Index Module</h3>
-    <BarChart/>
+    <BarChart />
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import BarChart from '~/components/konva/konva'
 
 export default {
   components: {
-    BarChart,
-  },
+    BarChart
+  }
 }
 </script>
