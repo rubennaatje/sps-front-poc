@@ -4,9 +4,9 @@
 
     <h2 id="project-goals">Project Goals</h2>
     <p>
-      Terminal CSS has no overhead and is lightweight
-      <strong>(~ 3k gzip)</strong>.
-      The source is written in
+      A unique game
+      <strong>(multiplayer race manager!)</strong>.
+      The game is written purely in javascript/typescript, with a node js (typescript) backend and a nuxt(vue but cooler) electron js frontend
       <strong>pure css</strong> to be accessible for everybody and easy to contribute.
     </p>
     <h2 id="markdown-terminal-css">We ❤️ Endurance racing</h2>

@@ -51,7 +51,7 @@ export default {
           }],
           yAxes: [{
             gridLines: {
-              display: false
+              display: true
             }
           }]
         }
