@@ -16,7 +16,7 @@ export const actions = {
 export const mutations = {
   NEWMESSAGE (state, data) {
     state.cars = data
-
+    console.log("new cars bitch")
     if (Object.keys(state.telemetry[0].topspeed).length > 100) {
       // delete might be bad for performance so I need to remove this later
       delete state.telemetry[0].topspeed[Object.keys(state.telemetry[0].topspeed)[0]]

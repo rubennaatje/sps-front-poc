@@ -11,7 +11,7 @@ electronDebug({
 })
 
 app.on('ready', () => {
-  vueDevtools.install()
+  // vueDevtools.install()
   const menu = Menu.getApplicationMenu()
   const refreshButton = new MenuItem({
     label: 'Relaunch electron',
