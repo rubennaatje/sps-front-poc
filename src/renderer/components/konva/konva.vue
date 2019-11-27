@@ -30,8 +30,8 @@ export default {
         width: 1000,
         height: 1000,
         scale: {
-          x: 1,
-          y: 1
+          x: 0.55,
+          y: 0.55
         }
       },
       pathConfig: {
@@ -44,8 +44,8 @@ export default {
           x: 1,
           y: 1
         },
-        offsetX: -25,
-        offsetY: -25
+        offsetX: -350,
+        offsetY: -50
       },
       trackValues: {
         length: null,
@@ -67,7 +67,7 @@ export default {
           case 'LMGTEPro': color = 'green'; break;
           case 'LMGTEAm': color = 'orange'; break;
         }
-        objects.push({ x: point.x, y: point.y, radius: 4, fill: color, offsetX: -25, offsetY: -25})
+        objects.push({ x: point.x, y: point.y, radius: 4, fill: color, offsetX: -350, offsetY: -50})
       }
 
       return objects;

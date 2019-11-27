@@ -24,9 +24,9 @@ app.on('ready', () => {
   Menu.setApplicationMenu(menu)
 })
 
-mainWinHandler.onCreated(browserWindow => {
-  browserWindow.webContents.openDevTools()
-})
+// mainWinHandler.onCreated(browserWindow => {
+//   browserWindow.webContents.openDevTools()
+// })
 
 // Require `main` process to boot app
 require('./index')

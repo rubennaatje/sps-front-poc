@@ -17,7 +17,7 @@
         current speed
       </th>
       <th>
-        s1
+        laps
       </th>
       <th>
         s2
@@ -47,7 +47,7 @@
           {{ todo.speed }}
         </td>
         <td>
-          33
+          {{ todo.laps}}
         </td>
         <td>
           55
@@ -83,7 +83,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      allSprints: 'cars/getAll'
+      allSprints: 'cars/getStandings'
     })
   }
 }
