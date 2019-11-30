@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 export const state = () => ({
   cars: [],
   telemetry: [
@@ -8,23 +10,27 @@ export const state = () => ({
 })
 
 export const actions = {
-  SOCKET_newMessage (context, data) {
-    context.commit('NEWMESSAGE', data)
+  SOCKET_updateCars (context, data) {
+    context.commit('UPDATECARS', data)
   }
 }
 
 export const mutations = {
-  NEWMESSAGE (state, data) {
+  UPDATECARS (state, data) {
     state.cars = data
+
     if (Object.keys(state.telemetry[0].topspeed).length > 100) {
+      // eslint-disable-next-line max-len
       // delete might be bad for performance so I need to remove this later, haven't found a way to really delete it though.
-      state.telemetry[0].topspeed[Object.keys(state.telemetry[0].topspeed)[0]] = undefined
+      // state.telemetry[0].topspeed[Object.keys(state.telemetry[0].topspeed)[0]] = undefined
       state.telemetry[1].topspeed[Object.keys(state.telemetry[1].topspeed)[0]] = undefined
       state.telemetry[2].topspeed[Object.keys(state.telemetry[2].topspeed)[0]] = undefined
+      state.telemetry[0].topspeed.splice(0, 1)
     }
-    state.telemetry[0].topspeed[data[0].car.carPhysics.lastCheck] = data[0].speed
-    state.telemetry[1].topspeed[data[1].car.carPhysics.lastCheck] = data[1].speed
-    state.telemetry[2].topspeed[data[2].car.carPhysics.lastCheck] = data[2].speed
+
+    Vue.set(state.telemetry[0].topspeed, data[0].car.carPhysics.lastCheck, data[0].speed)
+    Vue.set(state.telemetry[1].topspeed, data[1].car.carPhysics.lastCheck, data[1].speed)
+    Vue.set(state.telemetry[2].topspeed, data[2].car.carPhysics.lastCheck, data[2].speed)
   }
 }
 

@@ -15,6 +15,6 @@ app.on('window-all-closed', function () {
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') app.quit()
 })
-
+global.sharedObj = { name: '2017 24 Hours of Le mans' }
 // Load here all startup windows
 require('./mainWindow')

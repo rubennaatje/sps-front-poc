@@ -13,10 +13,38 @@ export default {
   components: {
     LineChart
   },
-  created () {
-    setInterval(this.fillData, 500)
-  },
   computed: {
+    lineChartData() {
+       const telemetry = this.getTelemetryy(1)
+
+      const data = {
+        labels: Object.keys(telemetry[0].topspeed),
+        datasets: [
+          {
+            label: 'car1',
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderColor: 'rgba(255,0,0,1)',
+            borderWidth: 1,
+            data: Object.values(telemetry[0].topspeed)
+          },
+          {
+            label: 'car2',
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderColor: 'rgba(0,255,0,1)',
+            borderWidth: 1,
+            data: Object.values(telemetry[1].topspeed)
+          },
+          {
+            label: 'car2',
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderColor: 'rgba(0,0,255,1)',
+            borderWidth: 1,
+            data: Object.values(telemetry[2].topspeed)
+          }
+        ]
+      }
+      return data;
+    },
     ...mapGetters({
       getTopspeedbyID: 'cars/getTopSpeed',
       getTelemetryy: 'cars/getTelemetry',
@@ -56,44 +84,8 @@ export default {
           }]
         }
       },
-      lineChartData: {
-
-      }
     }
   },
-  methods: {
-    fillData () {
-      const telemetry = this.getTelemetryy(1)
-
-      const data = {
-        labels: Object.keys(telemetry[0].topspeed),
-        datasets: [
-          {
-            label: 'car1',
-            backgroundColor: 'rgba(0,0,0,0)',
-            borderColor: 'rgba(255,0,0,1)',
-            borderWidth: 1,
-            data: Object.values(telemetry[0].topspeed)
-          },
-          {
-            label: 'car2',
-            backgroundColor: 'rgba(0,0,0,0)',
-            borderColor: 'rgba(0,255,0,1)',
-            borderWidth: 1,
-            data: Object.values(telemetry[1].topspeed)
-          },
-          {
-            label: 'car2',
-            backgroundColor: 'rgba(0,0,0,0)',
-            borderColor: 'rgba(0,0,255,1)',
-            borderWidth: 1,
-            data: Object.values(telemetry[2].topspeed)
-          }
-        ]
-      }
-      this.lineChartData = data
-    }
-  }
 
 }
 </script>
