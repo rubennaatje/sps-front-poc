@@ -1,13 +1,7 @@
-import Vue from 'vue'
 import { remote } from 'electron'
 
 export const state = () => ({
-  cars: [],
-  telemetry: [
-    { topspeed: [] },
-    { topspeed: [] },
-    { topspeed: [] }
-  ]
+  car: {}
 })
 
 export const actions = {

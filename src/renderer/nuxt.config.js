@@ -20,7 +20,8 @@ module.exports = {
   buildModules: [
   ],
   modules: [
-    'nuxt-spreadsheet'
+    'nuxt-spreadsheet',
+    ['nuxt-leaflet', { /* module options */ }]
   ],
   whiteListedModules: ['vue', 'vue-konva', 'konva'],
   build: {

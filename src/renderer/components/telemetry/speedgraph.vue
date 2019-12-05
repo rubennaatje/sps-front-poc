@@ -74,12 +74,12 @@ export default {
         scales: {
           xAxes: [{
             gridLines: {
-              display: false
+              display: true
             }
           }],
           yAxes: [{
             gridLines: {
-              display: true
+              display: false
             }
           }]
         }
