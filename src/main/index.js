@@ -15,7 +15,9 @@ app.on('window-all-closed', function () {
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') app.quit()
 })
+
 global.sharedObj = { name: '2017 24 Hours of Le mans', socketUrl: 'http://localhost:4001/' }
 global.user = { entryNumber: 8, username: 'Rubennaatje' }
+global.sharedObject = { socketIOAddress: process.argv[1] }
 // Load here all startup windows
 require('./mainWindow')
