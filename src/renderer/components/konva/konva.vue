@@ -30,8 +30,8 @@ export default {
         width: 1000,
         height: 1000,
         scale: {
-          x: 0.55,
-          y: 0.55
+          x: 1,
+          y: 1
         }
       },
       pathConfig: {
