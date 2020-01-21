@@ -11,7 +11,7 @@ export const actions = {
 export const mutations = {
   UPDATETEAM (state, data) {
     state.car = data.data
-    console.log(data)
+    console.log(data.telemetry[0])
   }
 }
 

@@ -47,10 +47,10 @@
           {{ todo.speed }}
         </td>
         <td>
-          {{ todo.laps}}
+          {{ todo.laps }}
         </td>
         <td>
-          55
+          {{ todo.percentage }}
         </td>
         <td>
           21
