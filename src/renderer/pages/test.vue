@@ -41,7 +41,7 @@
           {{ todo.car2 }}
         </td>
         <td>
-          {{ todo.car.drivers[0].name }}
+          {{ todo.realdeal.drivers[0].name }}
         </td>
         <td>
           {{ todo.speed }}

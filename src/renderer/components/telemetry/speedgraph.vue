@@ -14,8 +14,8 @@ export default {
     LineChart
   },
   computed: {
-    lineChartData() {
-       const telemetry = this.getTelemetryy(1)
+    lineChartData () {
+      const telemetry = this.getTelemetryy(1)
 
       const data = {
         labels: Object.keys(telemetry[0].topspeed),
@@ -43,7 +43,7 @@ export default {
           }
         ]
       }
-      return data;
+      return data
     },
     ...mapGetters({
       getTopspeedbyID: 'cars/getTopSpeed',
@@ -83,9 +83,9 @@ export default {
             }
           }]
         }
-      },
+      }
     }
-  },
+  }
 
 }
 </script>

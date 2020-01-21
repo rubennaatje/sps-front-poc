@@ -1,7 +1,7 @@
 <template>
   <div class="terminal-nav">
     <div class="terminal-logo">
-      <div class="logo terminal-prompt"><a href="#" class="no-style"> {{name}} </a></div>
+      <div class="logo terminal-prompt"><a href="#" class="no-style"> {{ name }} </a></div>
     </div>
     <nav class="terminal-menu">
       <ul>
@@ -21,8 +21,8 @@
 import { remote } from 'electron'
 export default {
   computed: {
-    name(){ 
-      return remote.getGlobal('sharedObj').name;
+    name () {
+      return remote.getGlobal('sharedObj').name
     }
   }
 }

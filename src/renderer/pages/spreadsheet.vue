@@ -18,7 +18,7 @@ export default {
       },
       // Initial data for spreadsheet
       data: {
-        "test":"19"
+        'test': '19'
       }
     }
   },
