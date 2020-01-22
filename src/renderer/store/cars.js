@@ -27,7 +27,6 @@ export const actions = {
 export const mutations = {
   UPDATECARS (state, data) {
     state.cars = data
-    console.log(data)
   }
 }
 

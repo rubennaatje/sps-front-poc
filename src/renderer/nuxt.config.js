@@ -15,7 +15,8 @@ module.exports = {
   plugins: [
     { ssr: true, src: '@/plugins/icons.js' },
     { ssr: false, src: '@/plugins/konva.js' },
-    { ssr: false, src: '~/plugins/socket.io.js' }
+    { ssr: false, src: '~/plugins/socket.io.js' },
+    { ssr: false, src: '~/plugins/vue-apexcharts.js' }
   ],
   buildModules: [
   ],

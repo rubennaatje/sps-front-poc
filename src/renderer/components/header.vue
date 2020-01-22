@@ -5,7 +5,7 @@
     </div>
     <nav class="terminal-menu">
       <ul>
-        <li><nuxt-link to="/oldpage">Home</nuxt-link></li>
+        <li><nuxt-link to="/">Home</nuxt-link></li>
         <li><nuxt-link to="/strategy">Strategy</nuxt-link></li>
         <li><nuxt-link to="/gridpage">Telemetry</nuxt-link></li>
         <li><nuxt-link to="/test">Timing screen</nuxt-link></li>

@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <chart/>
     <p>A modern and minimal CSS framework for terminal lovers.</p>
 
     <h2 id="project-goals">Project Goals</h2>
@@ -23,8 +24,10 @@
 </template>
 
 <script>
-
+import chart from '~/components/charts/speedapex.vue'
 export default {
-
+  components: {
+    chart
+  }
 }
 </script>
