@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <h3>Index Module</h3>
-    <BarChart />
+    <h3>Track Map</h3>
+    <TrackMap />
   </div>
 </template>
 
 <script>
-import BarChart from '~/components/konva/konva'
+import TrackMap from '~/components/konva/konva'
 
 export default {
   components: {
-    BarChart
+    TrackMap
   }
 }
 </script>

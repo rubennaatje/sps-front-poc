@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <chart/>
+    <chart />
     <p>A modern and minimal CSS framework for terminal lovers.</p>
 
     <h2 id="project-goals">Project Goals</h2>

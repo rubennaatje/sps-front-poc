@@ -17,7 +17,7 @@ export const mutations = {
     state.car = data.data
     if (state.telemetry.currentTelemetry.length > data.telemetry.currentTelemetry.length) {
       state.telemetry.lastlaptel = state.telemetry.currentTelemetry
-      console.log(state);
+      console.log(state)
     }
     state.telemetry.currentTelemetry = data.telemetry.currentTelemetry
   }

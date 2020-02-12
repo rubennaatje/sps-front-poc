@@ -64,23 +64,11 @@
 </template>
 
 <script>
-import axios from 'axios'
-import moment from 'moment'
 import {
-  mapActions,
   mapGetters
 } from 'vuex'
-import LineChart from '~/components/charts/line-chart'
 
 export default {
-  components: {
-    LineChart
-  },
-  data () {
-    return {
-
-    }
-  },
   computed: {
     ...mapGetters({
       allSprints: 'cars/getStandings'
