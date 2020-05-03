@@ -13,43 +13,55 @@ export default {
   components: {
     LineChart
   },
+  mounted () {
+    const ctx = document.getElementById('line-chart').getContext('2d')
+    ctx.imageSmoothingEnabled = false
+    ctx.webkitImageSmoothingEnabled = false
+    ctx.mozImageSmoothingEnabled = false
+    ctx.msImageSmoothingEnabled = false
+    ctx.oImageSmoothingEnabled = false
+  },
   computed: {
+    ...mapGetters({
+      getTelemetryy: 'team/getTelemetryKeys',
+      getTelemetryLastLap: 'team/getTelemetryLastLap'
+    }),
     lineChartData () {
-      const telemetry = this.getTelemetryy(1)
-
+      const telemetry = this.getTelemetryy
+      const lastlap = this.getTelemetryLastLap
       const data = {
-        labels: Object.keys(telemetry[0].topspeed),
+        labels: lastlap.keys,
         datasets: [
           {
-            label: 'car1',
+            label: 'current lap',
             backgroundColor: 'rgba(0,0,0,0)',
             borderColor: 'rgba(255,0,0,1)',
-            borderWidth: 1,
-            data: Object.values(telemetry[0].topspeed)
+            borderWidth: 5,
+            data: telemetry.values
           },
           {
-            label: 'car2',
+            label: 'last lap',
             backgroundColor: 'rgba(0,0,0,0)',
             borderColor: 'rgba(0,255,0,1)',
-            borderWidth: 1,
-            data: Object.values(telemetry[1].topspeed)
-          },
-          {
-            label: 'car2',
-            backgroundColor: 'rgba(0,0,0,0)',
-            borderColor: 'rgba(0,0,255,1)',
-            borderWidth: 1,
-            data: Object.values(telemetry[2].topspeed)
+            borderWidth: 5,
+            data: lastlap.values
           }
         ]
       }
+
+      console.log(telemetry);
+      try {
+        const ctx = document.getElementById('line-chart').getContext('2d')
+        ctx.imageSmoothingEnabled = false
+        ctx.webkitImageSmoothingEnabled = false
+        ctx.mozImageSmoothingEnabled = false
+        ctx.msImageSmoothingEnabled = false
+        ctx.oImageSmoothingEnabled = false
+      } catch {
+        console.log('err')
+      }
       return data
-    },
-    ...mapGetters({
-      getTopspeedbyID: 'cars/getTopSpeed',
-      getTelemetryy: 'cars/getTelemetry',
-      getTopSpeedkeys: 'cars/getTopSpeedkeys'
-    })
+    }
   },
   watch: {
     getTelemetryy (newcount, oldcount) {
@@ -61,7 +73,7 @@ export default {
       linechartOptions: {
         maintainAspectRatio: false,
         elements: {
-          line: { tension: 0 },
+          line: { tension: 0.15 },
           point: { radius: 0 }
         },
         animation: {
@@ -82,10 +94,16 @@ export default {
               display: false
             }
           }]
-        }
+        },
+        devicePixelRatio: 0.2
       }
     }
   }
 
 }
 </script>
+<style>
+  canvas#line-chart {
+    image-rendering: pixelated;
+  }
+</style>

@@ -29,5 +29,20 @@ export const getters = {
   },
   getLastLapTelemetry: state => id => {
     return state.telemetry.lastlaptel.map(a => [a.pos, a.val])
+  },
+  getTelemetryNormal: state => id => {
+    return state.telemetry.currentTelemetry
+  },
+  getTelemetryKeys: state => {
+    return {
+      keys: state.telemetry.currentTelemetry.map(a => Math.floor(a.pos)),
+      values: state.telemetry.currentTelemetry.map(a => a.val)
+    }
+  },
+  getTelemetryLastLap: state => {
+    return {
+      keys: state.telemetry.lastlaptel.map(a => Math.floor(a.pos)),
+      values: state.telemetry.lastlaptel.map(a => a.val)
+    }
   }
 }

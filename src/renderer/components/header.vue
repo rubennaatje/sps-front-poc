@@ -8,9 +8,9 @@
         <li><nuxt-link to="/">Home</nuxt-link></li>
         <li><nuxt-link to="/strategy">Strategy</nuxt-link></li>
         <li><nuxt-link to="/gridpage">Telemetry</nuxt-link></li>
-        <li><nuxt-link to="/test">Timing screen</nuxt-link></li>
+        <li><nuxt-link to="/timingpage">Timing screen</nuxt-link></li>
         <li><nuxt-link to="/spreadsheet">Spreadsheet</nuxt-link></li>
-        <li><nuxt-link to="/todos">Track map</nuxt-link></li>
+        <li><nuxt-link to="/trackmap">Track map</nuxt-link></li>
         <li><nuxt-link to="/map">Map</nuxt-link></li>
       </ul>
     </nav>
