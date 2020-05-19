@@ -1,12 +1,11 @@
 <template>
   <div class="container">
-    <h3>Track Map</h3>
     <TrackMap />
   </div>
 </template>
 
 <script>
-import TrackMap from '~/components/konva/konva'
+import TrackMap from '~/components/pixijs/trackmap.vue'
 
 export default {
   components: {
